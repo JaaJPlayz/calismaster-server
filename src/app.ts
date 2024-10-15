@@ -1,11 +1,12 @@
-import express, { Request, Response } from 'express'
+import express, { Request, Response } from "express";
+import { PORT } from "./constants";
 
-const app = express()
+const app = express();
 
-app.get('/', (_req: Request, res: Response) => {
-  res.send('Hello World!')
-})
+app.get("/", (_req: Request, res: Response) => {
+  res.send("Hello World!");
+});
 
-app.listen(3000, () => {
-  console.log('Example app listening on port 3000!')
-})
+app.listen(PORT, () => {
+  console.log("Example app listening on port 3000!");
+});
