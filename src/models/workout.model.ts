@@ -35,7 +35,7 @@ const deleteWorkout = async (id: number) => {
   await db("workouts").where({ id }).del();
 };
 
-export default {
+export {
   createWorkout,
   getWorkouts,
   getWorkout,
