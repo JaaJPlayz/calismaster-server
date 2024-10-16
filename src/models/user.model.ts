@@ -26,9 +26,7 @@ const createUser = async (user: IUser) => {
 
 const updateUser = async (user: IUser) => {
   const { id, name, email, password } = user;
-  await db("users")
-    .where({ id })
-    .update({ name, email, password });
+  await db("users").where({ id }).update({ name, email, password });
 };
 
 const deleteUser = async (id: number) => {
